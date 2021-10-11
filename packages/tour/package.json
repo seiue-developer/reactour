@@ -1,5 +1,5 @@
 {
-  "version": "2.2.0",
+  "version": "2.2.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -27,7 +27,7 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "name": "@reactour/tour",
+  "name": "@seiue-reactour/tour",
   "author": "Lionel Tzatzkin",
   "module": "dist/tour.esm.js",
   "size-limit": [

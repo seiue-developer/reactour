@@ -12,6 +12,7 @@ import Close from './Close'
 import Keyboard from './Keyboard'
 
 const Tour: React.FC<TourProps> = ({
+  portal,
   currentStep,
   setCurrentStep,
   setIsOpen,
@@ -104,8 +105,10 @@ const Tour: React.FC<TourProps> = ({
     ? step?.position
     : position
 
+  const RealPortal = portal || Portal
+
   return step ? (
-    <Portal>
+    <RealPortal>
       <FocusManager disabled={disableFocusLock}>
         <Observables
           mutationObservables={step?.mutationObservables}
@@ -182,7 +185,7 @@ const Tour: React.FC<TourProps> = ({
           ) : null}
         </Popover>
       </FocusManager>
-    </Portal>
+    </RealPortal>
   ) : null
 }
 
