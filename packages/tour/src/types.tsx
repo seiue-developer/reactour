@@ -4,7 +4,9 @@ import { MaskStylesObj } from '@reactour/mask'
 import { StylesObj } from './styles'
 
 type SharedProps = {
-  portal?: React.FC
+  portal?: React.FC<{
+    children: React.ReactChild
+  }>
   steps: StepType[]
   styles?: StylesObj & PopoverStylesObj & MaskStylesObj
   padding?: Padding
